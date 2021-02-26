@@ -11,6 +11,8 @@ class User extends Authenticatable implements UserContract
 {
     use VoyagerUser;
 
+    protected $table = 'admin';
+
     protected $guarded = [];
 
     public $additional_attributes = ['locale'];
