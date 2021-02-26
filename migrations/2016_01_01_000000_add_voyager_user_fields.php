@@ -9,8 +9,8 @@ class AddVoyagerUserFields extends Migration
      */
     public function up()
     {
-        Schema::table('users', function ($table) {
-            if (!Schema::hasColumn('users', 'avatar')) {
+        Schema::table('admin', function ($table) {
+            if (!Schema::hasColumn('admin', 'avatar')) {
                 $table->string('avatar')->nullable()->after('email')->default('users/default.png');
             }
             $table->bigInteger('role_id')->nullable()->after('id');
@@ -22,13 +22,13 @@ class AddVoyagerUserFields extends Migration
      */
     public function down()
     {
-        if (Schema::hasColumn('users', 'avatar')) {
-            Schema::table('users', function ($table) {
+        if (Schema::hasColumn('admin', 'avatar')) {
+            Schema::table('admin', function ($table) {
                 $table->dropColumn('avatar');
             });
         }
-        if (Schema::hasColumn('users', 'role_id')) {
-            Schema::table('users', function ($table) {
+        if (Schema::hasColumn('admin', 'role_id')) {
+            Schema::table('admin', function ($table) {
                 $table->dropColumn('role_id');
             });
         }
