@@ -23,7 +23,8 @@
         "arrilot/laravel-widgets": "^3.7",
         "league/flysystem": "~1.1|~2.0",
         "larapack/voyager-hooks": "~1.2.1",
-        "ext-json": "*"
+        "ext-json": "*",
+        "tymon/jwt-auth": "^1.0"
     },
     "require-dev": {
         "phpunit/phpcov": ">=6.0",
