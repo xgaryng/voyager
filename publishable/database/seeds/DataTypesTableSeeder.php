@@ -10,7 +10,7 @@ class DataTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        $dataType = $this->dataType('slug', 'admin');
+        $dataType = $this->dataType('slug', 'users');
         if (!$dataType->exists) {
             $dataType->fill([
                 'name'                  => 'users',
