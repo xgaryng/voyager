@@ -10,10 +10,10 @@ class DataTypesTableSeeder extends Seeder
      */
     public function run()
     {
-        $dataType = $this->dataType('slug', 'users');
+        $dataType = $this->dataType('slug', 'admin');
         if (!$dataType->exists) {
             $dataType->fill([
-                'name'                  => 'users',
+                'name'                  => 'admin',
                 'display_name_singular' => __('voyager::seeders.data_types.user.singular'),
                 'display_name_plural'   => __('voyager::seeders.data_types.user.plural'),
                 'icon'                  => 'voyager-person',
